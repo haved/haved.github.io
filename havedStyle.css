@@ -1,0 +1,46 @@
+*.havedHeader {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 4rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  /*background-color: #eceeef*/
+}
+
+*.title {
+  text-shadow: 1px 1px #cbcccd;
+  margin-bottom: 0;
+  margin-top: 1rem;
+}
+
+*.smallJumbo {
+  padding: 0.4rem;
+  padding-bottom: 0rem;
+  margin-bottom: 0;
+}
+
+p.code {
+  font-size: 15px;
+  font-family: monospace, sans-serif;
+  margin-bottom: 0;
+}
+
+span.code_keyword {
+  font-weight: bold;
+  color:  #388e3c;
+  text-shadow: 2px 2px #cbcccd;
+}
+
+img.minSize {
+  float:left;
+  width:4em;
+}
+
+div.row {
+  position: relative;
+}
+
+*.myCol {
+  position: absolute;
+  bottom: 0;
+}
