@@ -56,3 +56,21 @@ div.wideDarkBox {
   text-shadow: 1px 1px 1px #999999;
   box-shadow: inset 1px 1px 3px #444444;
 }
+
+img.fullWidth {
+  width:100%;
+  height:auto;
+}
+
+*.imageText {
+  font-size: 80%;
+  width:100%;
+  text-align: right;
+  padding-bottom: 1rem;
+}
+
+*.imageText-left {
+  font-size: 80%;
+  width:100%;
+  padding-bottom: 1rem;
+}

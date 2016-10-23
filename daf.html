@@ -5,46 +5,21 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css"
+                    integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
         <title>The daf language</title>
         <link rel="stylesheet" href="havedStyle.css">
     </head>
     <body>
         <div class="container">
-            <div class="header clearfix">
-                <nav>
-                <ul class="nav nav-pills float-xs-right">
-                    <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link active" href="#">Daf<span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
-                    </li>
-                </ul>
-                </nav>
-                <h3 class="text">Haved's website</h3>
-            </div>
-            <hr>
-            <div class = "jumbotron dark">
-            <p class="lead">
-                import daf.iostream as _;
-
-                def fac:=(n:int):int {
-                    n&lt;2?1:fac(n-1)+fac(n-2)
-                };
-
-                def main:=() {
-                    print!int(fac(readInt()))
-                };
+            <div id="headerBeHere"></div>
+            <script src="header.js"></script>
+            <script>loadHeader(document.getElementById("headerBeHere"), DAF_BUTTON_ID);</script>
+            <h1 class="display-4 title">The daf programming langauge</h1>
+            <p>
+                
             </p>
-            </div>
-        </div>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js"
+                    integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
     </body>
 </html>

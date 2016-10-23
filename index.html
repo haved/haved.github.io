@@ -5,32 +5,16 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css"
+                    integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
         <title>Haved's website</title>
         <link rel="stylesheet" href="havedStyle.css">
     </head>
     <body>
         <div class="container">
-            <div class="header clearfix havedHeader">
-                <img class="minSize" src="http://www.gravatar.com/avatar/431a36cea291be51378f3504e015dc04">
-                <!--<h3 class="text">Haved's website</h3>-->
-                <nav>
-                <ul class="nav nav-pills float-xs-right">
-                    <li class="nav-item">
-                    <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="daf.html">Daf</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
-                    </li>
-                </ul>
-                </nav>
-            </div>
+            <div id="headerBeHere"></div>
+            <script src="header.js"></script>
+            <script>loadHeader(document.getElementById("headerBeHere"), HOME_BUTTON_ID);</script>
             <div class="row havedTitleBar">
                 <div class="span6 col-lg-6">
                     <h1 class="display-3 title">Haved's website</h1>
@@ -48,7 +32,7 @@
                 </div>
             </div>
             <p class="lead">
-                I'm Haved, and this is my homepage. I enjoy programming, and decided to pick up some web-development to get a portfolio going.
+                I'm Haved, and this is my website. I enjoy programming, and decided to pick up some web-development to get a portfolio going.
                 I don't have anything substantial to put on my portfolio as of yet, but I'm working on it, as you can see in my daf compiler repository.
                 If you want to learn more about daf, you can click <a href="daf.html">here</a>.
             </p>
@@ -56,16 +40,124 @@
                 I'm in school and will not be looking for professional work any time soon, 
                     but it's still nice to have a place where others can get to know what I'm spending my days doing.
             </p>
-        </div>
-        <div class="wideDarkBox">
-            <br><br>
-        </div>
-        <div class="container">
-            <h3>Why hello there</h3>
+            <br>
+            <br>
+            <h3>Stuff I've done in the past / How I got started</h3>
             <p>
-                This is a test of the normal text on this page
+                I started of back in 2008 with Microsoft Small Basic. A piece of software for writing graphical and text applications in a simplified
+                version of Visual Basic. In 2009 I got my first book about programming, and started learning java. Another book taught me java swing, 
+                and I started using it to write games. I wrote a game for my brother for christmas 2010, titled "Tha grass grows".
+                Using huge game-loop spamming java swing's repaint method, I created a real time strategy game where you upgraded
+                 your individual strands of grass to collect sunlight for the night. It wasn't all that fun.
             </p>
+            <div class="col-lg-4 float-xl-right">
+                <img class="fullWidth" src="PushGame.png">
+                <p class="imageText">The puzzle. You move rows to get the target image</p>
+            </div>
+            <p>
+                In early 2011 I created a sliding puzzle applet, complete with an editor and board exporting.
+                I also used java sockets to make a game in which you had to click a button as many times as possible in ten seconds, 
+                competing over the internet. Later that same year I googled "java 3d" and found a library for rendering 3D in java.
+                I didn't understand much of it, and ended up making <a href="https://www.youtube.com/watch?v=T8OG_BCLzQQ">this atrocity</a>.
+                Later that same year I tried making a minecraft mod adding new mushrooms. I didn't understand what de-obfuscation was, 
+                so I was at all times looking at and using complete gibberish class names and methods, using trial and error and looking at others' mods.
+            </p>
+            <p>
+                I wanted to make games og my own, but didn't have a good way of rendering. I ended up using a BufferedImage where i individually copied pixels from
+                other BufferedImages. It wasn't good, but it let me make my first somewhat fun game.
+                I can't recall when I started, but I picked it up and finished it in July 2012, and made <a href="https://www.youtube.com/watch?v=F4fhmSov-P8">this video of it</a>.
+                Late part of 2012 was spent trying to use the JMonkeyEngine and blender to make a game with cows and UFOs. There's a video on the youtube channel,
+                but I wont link it here. All the youtube videos on that channel are awful, and are only kept for historic purposes.
+                I don't like the videos, but removing them and not bringing it up would be prentending all this never happened, which is even worse.
+            </p>
+            <p>
+                In 2013 i started using GitHub, making digging through my dark past and terrible code a lot easier.
+                The problems I had previously faced with rendering games were now gone, thanks to video tutorials by <a href="https://www.youtube.com/user/thebennybox">thebennybox</a>.
+                I spent time learning OpenGL in java using lwjgl, and eventually started making "Recoil Game".
+                You would run to the right of the screen from a wave, having to clear the way with a shotgun, or shoot down to jump (hence "Recoil Game")
+                I never got to implementing random obsticle generation, making the game almost complete, but no fun.
+                I also tried making Minecraft mods again, this time realizing I could de-obfuscate the game code to make it readable, 
+                but still stopping before the mod was finished. By that time the mod was playable, but I didn't want to play it, and that made me not finish it.
+            </p>
+            <p>
+                Instead I spent time during my summer vacation starting a big game project, using OpenGL and making a level editor.
+                The problem was that the gameplay that started to form felt bad. 
+                The controls were bad, and even though my homemade physics engine was fun, the engine became a mess.
+                That was November 11, so natrually I November 28 suddely began a new project, again aiming for a proper 2d game engine.
+                This time it would read the world from a text file, setting properties in your entities. Again I stopped because I couldn't make good gameplay.
+                Late 2013 was spent experimenting with game engine design. 
+                In hindsight I should have aimed for one game with ok design, and not a general engine.
+            </p>
+            <p>
+                That's exactly what I did the next year. May 2014 I started DroneStrikeStomp. Still 2D in java using lwgjl and OpenGL, but this time,
+                there was no distingsion between engine and game. Best part is, the gameplay was great compared to everything else I had done before.
+                It was as far as I could tell a new game idea, and it was fun. For some reason I stopped development after four days.
+                I picked it up nearly a year later and added more gameplay and mechaincs. The game is to this day almost done, and fun to play around with.
+                It just lacks winning and loosing states, or any form of scoring.
+                I think I stopped because I feared balancing it would be diffiult, or maybe I just didn't think of picking it up again.
+                One day I'll either finish it, or rewrite it, becuase it has potential.
+            </p>
+            <img class="fullWidth" src="Total_DDS.png">
+            <p class="imageText">
+                Drone Strike Stomp, where you hijack drones and steer them into each other to protect their target: A Wall
+            </p>
+            <p>
+                In 2015 I started to mess around with C and C++. I started new projects to learn them, but hit a roadblock in C
+                when I didn't understand memory allocation. I went to C++ where I had a familiar 
+                <span class="code_keyword">new</span> keyword, but knew nothing about the <span class="code_keyword">delete</span> keyword.
+                Suffice to say I was encountering memory leaks. When I started to use smart pointers, they took over the project so much so that 
+                I decided to start the project over, but in a garbage collected language: C#.
+                More importantly I decided to start making games in 3D. The prevoiusly mentioned Bennybox had 3d tutorials as well, and I used them
+                to get the hang of modern OpenGL, using the OpenTK library I found for C#.
+                The "3D Smith Game" started to take shape, with an intentionally texture-less graphics system.
+                I really liked the models I made, and the room I placed them in. The gameplay was... uhm.. interresting as well.
+                You would move metal ingots into your foundry, spam the bellow, cast metal swords, warm the blade over the coal, and hammer the
+                edge on your anvil. Using shaders I made it look quite nice, and a custom mesh file format allowed my to actually deform and sharpen the
+                sword mesh. Shadows and point lights were added, and specular lighting made the swordblade look really nice.
+            </p>
+            <div class="row">
+                <div class="col-lg-8">
+                    <img class="fullWidth" src="SmithGame.png">
+                    <p class="imageText-left">Your workshop. Smelted tin in the foundry and a broadsword cast in the casting table</p>
+                </div>
+                <div class="col-lg-4">
+                    <img class="fullWidth" src="Smithing.png">
+                    <p class="imageText"> Shaping a copper sword on the anvil</p>
+                </div>
+            </div>
+
+            <p>
+                The Smith Game was my biggest project so far, but it dragged on, and the only thing you did was hammer metal.
+                Sure, I was going to add combat and story eventually, but I got bored. I wanted fun and compelling gameplay quickly, 
+                so natrually, I made an Android app for programming Assembly on the go. AssemblyFun was its name, and it is yet
+                another addition to the list of projects that bored me once I had some actual gameplay working. I spent lots of time on AssemblyFun.
+                I even made a specification for my own assembly language, heavily inspired by ARM assembly. 
+                The documentation can be found <a href="">here</a>. I implemented almost all the assembly instructions, as well as tests
+                and storing of results. Not only was it my first real app, but it was also the first time I used databases.
+                You can't make your own tasks, meaning you'll run out of stuff to do very quickly.
+                I could add task creation and the final instructions in very little time, but I didn't feel the app would be much more enjoyable, 
+                even with unlimited possibilities. It's somewhat boring to write assembly on your phone.
+            </p>
+
+            <p>
+                Late 2015 I wanted my own programming langauge. I wanted full control over the hardware, while not suffering from C++'s 
+                amount of syntax, and terrible error messages in headers someone else wrote. In fact, I didn't want headers.
+                I might (read: probably should) have gone for rust, but the borrowing checker frightens me. So I started writing down
+                ideas for a new langauge. It began very similar to C++, java, and some rust syntax I had picked up, but over the course of a year, the
+                syntax changed a lot. The vim syntax file I wrote at the very beginning is pretty much useless now.
+                The bad thing about working on a compiler for a year without really getting anywhere is that I don't have much
+                to show for it. The parser I wrote in Java was just a parser, and the language changed so much during development I
+                needed a full-fledged compiler. It'll take a long time without getting anything in return, but I'm tired of starting 
+                new prjects all the time, not finishing old ones.
+           </p>
+           <p>
+               One day, I'll hopefully have a nice compiler, and have spent some time finishing Recoil Game, Drone Strike Stomp, and Assembly Fun.
+               Many of the prjects I've actually finished were written before 2013. That means I have very little finished on my GitHub, save for
+               a small program for converting meshes to a binary format. One day, I'll have multiple nice pieces of software to show for, and believe me,
+               the next project after the compiler and fixing old games, will be a small and managable one, written in <a href="daf.html">daf</a>. ;)
+           </p>
         </div>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js"
+                    integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
     </body>
 </html>
