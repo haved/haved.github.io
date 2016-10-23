@@ -7,6 +7,10 @@
   /*background-color: #eceeef*/
 }
 
+*.havedTitleBar {
+  padding-bottom: 1rem;
+}
+
 *.title {
   text-shadow: 1px 1px #cbcccd;
   margin-bottom: 0;
@@ -16,7 +20,7 @@
 *.smallJumbo {
   padding: 0.4rem;
   padding-bottom: 0rem;
-  margin-bottom: 0;
+  margin-bottom: 0rem;
 }
 
 p.code {
@@ -36,11 +40,17 @@ img.minSize {
   width:4em;
 }
 
-div.row {
-  position: relative;
+div.wideDarkBox {
+  width: 90%;
+  float: right;
+  padding-top: 0.4rem;
+  background-color: #004d40;
+  color:#eeeeee;
+  text-shadow: 1px 1px 1px #999999;
+  box-shadow: inset 0px 0px 5px 0px #000000;
 }
 
-*.myCol {
-  position: absolute;
-  bottom: 0;
+div.left89 {
+  width: 89%;
+  float: left;
 }
