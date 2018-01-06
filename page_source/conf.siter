@@ -2,4 +2,31 @@ let title = "Haveds blog"
 let subtitle = "Code and stuff"
 let css_meta_tags = "fish"
 
-override postDir = "posts"
+override sourceDir = "."
+override destDir = ".."
+
+debug title
+debug subtitle
+
+#append work += {
+#    handler = "blogFrontpage"
+#	filter = "index\.html"
+#	defaults = {}
+#}
+#
+#append work += {
+#    handler = "blogPage"
+#	filter = "posts/.*\.html"
+#	defaults = {
+#	    layout = "layout/blogPage.html"
+#	}
+#}
+#
+#append work += {
+#	handler = "page"
+#	filter = ".*\.html"
+#	defaults = {
+#	    layout = "layout/page.html"
+#	}
+#}
+#debug work
