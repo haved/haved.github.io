@@ -1,0 +1,5 @@
+let title = "Haveds blog"
+let subtitle = "Code and stuff"
+let css_meta_tags = "fish"
+
+override postDir = "posts"
