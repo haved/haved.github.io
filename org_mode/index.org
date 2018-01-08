@@ -1,7 +1,0 @@
-#+BEGIN_SRC HTML
----
-layout: home
----
-#+END_SRC
-* Test of index.org
-Hey there, it's me, haved.
