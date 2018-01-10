@@ -7,6 +7,7 @@ categories: old replaced thoughts
 I'm not a good writer, and only really write for myself on this blog. It shall serve as a time stamped archive of thoughts about language.
 Previous ideas have just been tucked away in `Specs/probablyOutdated_2017_12_23/dafScratchpad` or been banished to the depths of version control where they belong.
 Now I don't just want this blog to discuss language design. I also need a place to write down the past, present and future of the compiler.
+  
 Of all the lines written for the DafCompiler, very few remain. Most of it comes down to bad code getting replaced, but quite often I'll realize a well-implemented feature is better handled elsewhere.
 The prime example of this is the `Expression.enableFunctionReturn()`-method. It would allow a given expression to have a Function type.
 The `FunctionCallExpression` would then invoke this method on it's target, to get the correct type. This worked, but messed up the code in many different places.
@@ -38,7 +39,7 @@ Now things get worse in the following example:
 def main() {
     mut x := 6;
     def mut xRef := x;
-	xRef = 4;
+    xRef = 4;
 };
 ```
 
@@ -46,6 +47,7 @@ In this example, you have assignment. The type of the right hand side has to mat
 The left hand side must also be a mutable expression. A function type isn't, but as you can see from its signature, `():mut i32`, it can implicitly be evaluated to one.
 The problem is that you can't really cast this, because you don't have the target type.
 What I'm doing now is checking if the left hand side is a function type. This check happens just before the assignment-operator complains that it's LHS isn't mutable.
+  
 Now this fix doesn't feel good. I'd like to use `isFunctionType()` as little as possible,
 and rather have a general function that tries to turn a type into a target with a specific ValueKind or ConcreteTypeKind.
 This would also be used in the numeric operators. They just know they add primitives.
