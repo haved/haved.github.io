@@ -4,19 +4,27 @@ title:  "Whatever happened to allowFunctionType()"
 date:   2018-01-10 16:21:00 +0100
 categories: old replaced thoughts
 ---
-I'm not a good writer, and only really write for myself on this blog. It shall serve as a time stamped archive of thoughts about language.
-Previous ideas have just been tucked away in `Specs/probablyOutdated_2017_12_23/dafScratchpad` or been banished to the depths of version control where they belong.
-Now I don't just want this blog to discuss language design. I also need a place to write down the past, present and future of the compiler.
-  
+
+>### Update 2018-01-18: 
+>General text improvements.
+>I'm not a good writer, and only really write for myself on this blog. It shall serve as a time stamped archive of thoughts about language.
+>My previous system consisted of text files forgotten in `Specs/probablyOutdated_2017_12_23/dafScratchpad`, until they eventually got banished to the depths of git.
+>On this blog I'll get a bit more structure, and writing as if someone else is reading will hopefully allow myself to look back and understand what I was thinking.
+>On that note, the text below is difficult to read for you and me both. No headings and a generally confusing flow.
+
+I don't just want this blog to discuss language design. I also need a place to write down the past, present and future of the compiler.
+
 Of all the lines written for the DafCompiler, very few remain. Most of it comes down to bad code getting replaced, but quite often I'll realize a well-implemented feature is better handled elsewhere.
 The prime example of this is the `Expression.enableFunctionReturn()`-method. It would allow a given expression to have a Function type.
-The `FunctionCallExpression` would then invoke this method on it's target, to get the correct type. This worked, but messed up the code in many different places.
-If a function was referenced by name without anyone explicitly stating it could be of its function type, it would be implicitly evaluated.
+A function type is a unique type for every function defined in the language. A `FunctionCallExpression` would then use this type to get the `FunctionExpression` and call its LLVM prototype.
+The problem is that not every expression wants a function type. If you give a function, it should be implicitly called to get its return type, if possible (no parameters).
+So the default behavior for a `VariableExpression` referencing a def (a named FunctionExpression) was to take its implicit return type.
+If the VariableExpression had been told `enableFunctionReturn()`, it would instead take the def's explicit type, i.e. the function's type.
   
 The alternative came once type conversions were implemented.
-Now, whenever you reference a function by name, that expression has the function type.
+Now, whenever you reference a function by name, that VaribaleExpression has the function type.
 Any time you don't want a function type, you'll just use the normal type casting system to get the desired type.
-You would have to use this system either way, in case the function return type had to be converted.
+You would have to try invoke casting either way, in case the implicit function return type had to be converted.
 Take the following example:
 ```
 def getI8 := 5i8;
