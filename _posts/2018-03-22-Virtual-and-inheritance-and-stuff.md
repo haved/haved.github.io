@@ -36,7 +36,7 @@ typedef CrateEntity := class with Entity {
 };
 
 typedef VEntity := virt Entity; //Makes all functions virtual in the class, introducing a vtable
-typedef VCreateEntity := class with CreateEntity with VEntity; //Fills the vtable
+typedef VCreateEntity := class with CreateEntity with VEntity; //New class filling VEntity's vtable
 
 def main() {
     mut world := Vec(&mut VEntity);
@@ -47,4 +47,5 @@ def main() {
 }
 ```
 
- I'd recommend reading the `with`-research-file which at a later date will finalize the inheritance syntax.
+I'd recommend reading the `with`-research-file which at a later date will finalize the inheritance syntax.
+
