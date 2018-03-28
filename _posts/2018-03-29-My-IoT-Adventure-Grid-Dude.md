@@ -76,6 +76,8 @@ which was too fast for the SoftwareSerial to read. The serial over USB is locked
 So how did I communicate with both? Hardware supported output is already locked to computer output.
 I don't bother with serial input from the computer, though, so the esp8266's output fits in the hardware supported one, as it needs to.
 The esp8266 input can come from a SoftwareSerial, even at the 152000 baud rate, so it gets hooked up to Arduino pin 3 or whatever.
+Note that this pin is 5v, higher than the rest of the esp8266 which is connected to 3.3v, as it should be.
+I give no guarantees that your esp8266 won't blow up if you do this.
 
 NB: You have to unplug the esp8266 from the Arduino's RX while flashing it.
 
