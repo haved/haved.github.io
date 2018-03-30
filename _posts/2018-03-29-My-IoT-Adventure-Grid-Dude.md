@@ -57,7 +57,7 @@ Content-Length: <# of presses>
 I needed the Content-length on the server side to not read past the end of stream. There is no EOF apparently,
 so I can time out waiting for data after the end of the stream.
 For the normal website parts I didn't bother with Content-length.
-I was putting one file into a template file, and adding to file sizes together seemed like work.
+I was putting one file into a template file, and adding two file sizes together seemed like work.
 Besides, god knows if newlines are \r or \n or \r\n. Browsers didn't seem to mind.
 
 The content on the website is a simple html5 canvas. I had to use JavaScript to make it fit the screen, but canvases require JS either way,
