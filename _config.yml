@@ -17,7 +17,7 @@
  title: Haved's stuff
  email: havard.postkasse@gmail.com
  description: >- # this means to ignore newlines until "baseurl:"
- This is where I share things I write that I sometimes might want someone to read.
+  This is where I share things I write that I sometimes might want someone to read.
  baseurl: "" # the subpath of your site, e.g. /blog
  url: "haved.github.io" # the base hostname & protocol for your site, e.g. http://example.com
  twitter_username: HKrogstie
